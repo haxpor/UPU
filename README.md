@@ -42,9 +42,9 @@ Todos
 2. Add option to only display the file structure which the package contains to be able to extract only certain files on command line. For e.g. like "tree".
 3. Add graphical user interface with the option to only extract certain files.
 
-Download
+Download Pre-Built Binary
 ---
-Version 0.0.0.1: https://github.com/ChimeraEntertainment/UPU/releases/download/0.0.0.1/UnityPackageUnpacker-0.0.0.1.zip
+Link [http://wasin.io/user-data/projects/upkgunpack/upkgunpack.zip](http://wasin.io/user-data/projects/upkgunpack/upkgunpack.zip)
 
 Search Engine Keywords:
 unity3d, unitypackage, unpack, extract, deflate, assets
