@@ -151,12 +151,10 @@ namespace UpuCore
 
             using (Stream inStream = File.OpenRead(tarFileName))
             {
-                using (TarArchive tarArchive = TarArchive.CreateInputTarArchive(inStream))
-                {
-                    Directory.CreateDirectory(destFolder);
-                    Directory.SetCurrentDirectory(destFolder);
-                    tarArchive.ExtractContents(".");
-                }
+				TarArchive tarArchive = TarArchive.CreateInputTarArchive(inStream);
+				Directory.CreateDirectory(destFolder);
+				Directory.SetCurrentDirectory(destFolder);
+				tarArchive.ExtractContents(".");
             }
 
             Directory.SetCurrentDirectory(formerDir);

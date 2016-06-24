@@ -1,5 +1,4 @@
-﻿using CommandLine;
-using System;
+﻿using System;
 using System.Diagnostics;
 using System.Reflection;
 using UpuCore;
@@ -12,19 +11,16 @@ namespace UpuConsole
         {
             var upu = new UpuConsole();
 
-            if (!Parser.Default.ParseArguments(args, upu))
-            {
-                if (args.Length > 0)
-                {
-                    upu.InputFile = args[0];
-                }
-                else
-                {
-                    Console.WriteLine("Parameter error"); // todo: display generated usage
-                    Console.WriteLine(upu.GetUsage());
-                    Environment.Exit(9);
-                }
-            }
+			if (args.Length > 0)
+			{
+				upu.InputFile = args[0];
+			}
+			else
+			{
+				Console.WriteLine("Parameter error"); // todo: display generated usage
+				Console.WriteLine(upu.GetUsage());
+				Environment.Exit(9);
+			}
 
             int errorCode = 0;
 

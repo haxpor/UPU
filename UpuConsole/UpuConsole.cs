@@ -1,7 +1,5 @@
 ﻿using System;
-using CommandLine;
 using System.IO;
-using CommandLine.Text;
 using UpuCore;
 using System.Text;
 
@@ -10,16 +8,16 @@ namespace UpuConsole
     class UpuConsole
     {
 #region Command line parameters
-        [Option('i', "input", Required = false, HelpText = "Unitypackage input file.")]
+        //[Option('i', "input", Required = false, HelpText = "Unitypackage input file.")]
         public string InputFile{ get; set; }
 
-        [Option('o', "output", Required = false, HelpText = "The output path of the extracted unitypackage.")]
+        //[Option('o', "output", Required = false, HelpText = "The output path of the extracted unitypackage.")]
         public string OutputPath { get; set; }
 
-        [Option('r', "register", Required = false, HelpText = "Register context menu handler")]
+        //[Option('r', "register", Required = false, HelpText = "Register context menu handler")]
         public bool Register { get; set; }
 
-        [Option('u', "unregister", Required = false, HelpText = "Unregister context menu handler")]
+        //[Option('u', "unregister", Required = false, HelpText = "Unregister context menu handler")]
         public bool Unregister { get; set; }
 #endregion
 
@@ -109,14 +107,11 @@ namespace UpuConsole
             }
         }
         
-        [HelpOption]
         public string GetUsage()
         {
             var sb = new StringBuilder();
             
             sb.AppendLine();
-
-            sb.Append(HelpText.AutoBuild(this, (HelpText current) => HelpText.DefaultParsingErrorsHandler(this, current)));
 
             sb.AppendLine("Help us make to this piece of software even better and contribute!");
             sb.AppendLine("https://github.com/ChimeraEntertainment/UPU");
